@@ -1,0 +1,37 @@
+% Define AND command for header formatting
+\newcommand{\AND}{\unskip\
+	\cleaders\copy\ANDbox\hskip\wd\ANDbox\
+	\ignorespaces\
+}
+\newsavebox\ANDbox\
+\sbox\ANDbox\
+
+\placelastupdatedtext\
+\begin{header}
+	\textbf{\fontsize{24 pt}{24 pt}\selectfont Trần Nguyễn Thái Bình}
+
+	\vspace{0.3 cm}
+
+	\normalsize
+	\mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Thủ Đức, Hồ Chí Minh}%
+	\kern0.25 cm%
+	\AND%
+	\kern0.25 cm%
+	\mbox{\hrefWithoutArrow{mailto:trannguyenthaibinh46@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}trannguyenthaibinh46@gmail.com}}%
+	\kern0.25 cm%
+	\AND%
+	\kern0.25 cm%
+	\mbox{\hrefWithoutArrow{tel:+84--81--416--1568}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}081 416 1568}}%
+	\kern0.25 cm%
+	% \AND%
+	% \kern0.25 cm%
+	% \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}yourwebsite.com}}%
+	% \kern0.25 cm%
+	\AND%
+	\kern0.25 cm%
+	\mbox{\hrefWithoutArrow{https://linkedin.com/in/kevinnitro}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}kevinnitro}}%
+	\kern0.25 cm%
+	\AND%
+	\kern0.25 cm%
+	\mbox{\hrefWithoutArrow{https://github.com/KevinNitroG}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}KevinNitroG}}%
+\end{header}
