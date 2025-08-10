@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KevinNitro's CV</title>
+  </head>
+  <body>
+    <ul>
+      {{-range .Files}}
+      <li>
+        <a href="https://kevinnitro.gitlab.io/cv/{{.}}" target="_blank"
+          >{{.}}</a
+        >
+      </li>
+      {{-end}}
+    </ul>
+  </body>
+</html>

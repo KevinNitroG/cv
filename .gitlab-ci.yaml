@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+
+.branch-rules: &branch-rules
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+build:
+  <<: *branch-rules
+  stage: build
+  image: texlive/texlive:TL2024-historic
+  script:
+    - make cv
+    - ls -la ./build/
+  artifacts:
+    paths:
+      - build/*.pdf
+
+pages:
+  <<: *branch-rules
+  stage: deploy
+  image: golang:alpine3.22
+  script:
+    - make page
+  dependencies:
+    - build
+  artifacts:
+    paths:
+      - public
