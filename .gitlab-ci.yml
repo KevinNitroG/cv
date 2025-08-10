@@ -9,7 +9,7 @@ stages:
 build:
   <<: *branch-rules
   stage: build
-  image: texlive/texlive:TL2024-historic
+  image: texlive/texlive:latest
   script:
     - make cv
     - ls -la ./build/
@@ -25,6 +25,7 @@ pages:
     - make page
   dependencies:
     - build
+  pages: true
   artifacts:
     paths:
       - public
