@@ -2,12 +2,15 @@ stages:
   - build
   - deploy
 
-.branch-rules: &branch-rules
+.common: &common
   rules:
+    - when: manual
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - "src/**/*.tex"
 
 build:
-  <<: *branch-rules
+  <<: *common
   stage: build
   image: texlive/texlive:latest
   script:
@@ -18,7 +21,7 @@ build:
       - build/*.pdf
 
 pages:
-  <<: *branch-rules
+  <<: *common
   stage: deploy
   image: golang:alpine3.22
   script:
