@@ -33,6 +33,3 @@ pages:
   dependencies:
     - build
   pages: true
-  artifacts:
-    paths:
-      - public
