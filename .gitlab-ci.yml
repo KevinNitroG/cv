@@ -19,6 +19,8 @@ build:
   artifacts:
     paths:
       - build/*.pdf
+  resource_group: build
+  interruptible: true
 
 pages:
   <<: *common
