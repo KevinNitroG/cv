@@ -4,10 +4,10 @@ stages:
 
 .common: &common
   rules:
-    - when: manual
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
         - "src/**/*.tex"
+    # - when: manual
 
 build:
   <<: *common
