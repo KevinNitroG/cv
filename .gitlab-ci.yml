@@ -7,6 +7,7 @@ stages:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
         - "src/**/*.tex"
+        - "templates/**"
     # - when: manual
 
 build:
