@@ -26,7 +26,7 @@ func main() {
 		panic(err)
 	}
 
-	tmpl := template.Must(template.ParseFiles("templates/index.html"))
+	tmpl := template.Must(template.ParseFiles("templates/index.gohtml"))
 
 	outputFile, err := os.Create("public/index.html")
 	if err != nil {
